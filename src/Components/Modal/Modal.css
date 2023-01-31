@@ -1,0 +1,44 @@
+.modal_background {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  overflow: unset;
+  background: rgba(0, 0, 0, 0.25);
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+}
+
+.modal_card {
+  position: absolute;
+  background: #FFFFFF;
+  padding: 25px;
+  border: 1px solid grey;
+  border-radius: 4px;
+  margin: 30px;
+  min-width: 180px;
+  max-width: 1000px;
+  top: 200px;
+  animation: modalcontent;
+  animation-duration: 1s;
+
+}
+
+@media (max-width: 500px) {
+  .modal_card {
+    margin: 15px;
+  }
+}
+
+.close_button_wrapper {
+  position: relative;
+  background: red;
+}
+
+@keyframes modalcontent {
+  0% { top: 0;  }
+	100% { top: 200px;  }
+}
